@@ -45,10 +45,6 @@ class Owner
   end 
   
   def walk_dogs
-    @pets.each do |key|
-    if key == :dogs
-      key.map {|val| val.mood = "happy"}
-    end 
-    end 
-  end 
+    @pets[:dogs].each {|val| val.mood = "happy"}
+  end
 end
