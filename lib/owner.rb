@@ -46,8 +46,9 @@ class Owner
   
   def walk_dogs
     pets.each do |key,val|
-    val.mood = "happy" if key == :dogs
+    if key == :dogs
+      val.mood = "happy"
     end 
-    pets
+    end 
   end 
 end
