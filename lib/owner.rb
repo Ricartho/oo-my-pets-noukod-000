@@ -55,9 +55,11 @@ class Owner
   end
   
   def sell_pets
-    @pets.each do |key,val|
-      val.map {|pet_mood| pet_mood.map = "nervous"}
-    end 
-    @pets.clear
-  end 
+    pets.each do |kind, pet|
+      pet.map do |pet_mood|
+        pet_mood.mood = "nervous"
+      end
+    end
+    pets.clear
+  end
 end
